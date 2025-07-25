@@ -1,3 +1,5 @@
+
+```markdown
 ```javascript
 let speedTypingTest=document.getElementById("speedTypingTest");
 let timer=document.getElementById("timer");
