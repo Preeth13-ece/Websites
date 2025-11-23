@@ -1,0 +1,16 @@
+import React from 'react'
+import './index.css'
+
+const AppItem = props => {
+  const { main } = props
+  const { appName, imageUrl } = main
+
+  return (
+    <li className="app-item">
+      <img src={imageUrl} alt={appName} className="app-img" />
+      <p className="app-name">{appName}</p>
+    </li>
+  )
+}
+
+export default AppItem
