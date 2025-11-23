@@ -1,0 +1,21 @@
+const TabItem = props => {
+  const {details, isActive, changeingtab} = props
+  const {tabId, displayText} = details
+
+  const onClickTab = () => {
+    changeingtab(tabId)
+
+
+  return (
+    <li className="tab-item">
+      <button
+        type="button"
+        className={isActive ? 'active-tab' : ''}
+        onClick={onClickTab}
+      >
+        {displayText}
+      </button>
+    </li>
+  )
+}
+
