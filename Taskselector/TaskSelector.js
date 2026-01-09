@@ -1,3 +1,6 @@
+import {Component} from 'react'
+import Loader from 'react-loader-spinner'
+
 class TaskSelector extends Component{
   state={inputvalue:'',result:'',apistatus:''}
 
@@ -29,7 +32,7 @@ getResult=async ()=>{
   }
 }  
   
-rendersucessful(){
+rendersucessful-()=>{
   const {result}=this.state 
   return(
     <div>
@@ -40,6 +43,18 @@ rendersucessful(){
   )
 }
 
+renderloading=()=>(
+  <div>
+     <Loader/>
+  </div>
+)
+
+renderfailure=()=>(
+  <div> 
+     <h1>API FAILED</h1>
+  </div>
+)
+  
 render(){
   const {apistatus}=this.state
   Switch(apistatus){
